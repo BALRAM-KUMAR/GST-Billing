@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>GST Billing System</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <h1>GST Billing System</h1>
+
+    <!-- Form to create product categories -->
+    <h2>Create Product Categories</h2>
+    <input type="text" id="categoryName" placeholder="Enter Category Name">
+    <input type="number" id="categoryRate" placeholder="Enter Category GST Rate">
+    <button onclick="addCategory()">Add Category</button>
+
+    <h2>Create Products</h2>
+    <input type="text" id="productName" placeholder="Enter Product Name">
+    <select id="productCategory">
+        <!-- Options will be populated using JavaScript -->
+    </select>
+    <input type="number" id="productRate" placeholder="Enter Product Rate">
+    <button onclick="addProduct()">Add Product</button>
+
+    <!-- Form to record a sale -->
+
+    <h2>Record Sale</h2>
+    <select id="saleProduct">
+        <!-- Options will be populated using JavaScript -->
+    </select>
+    <button onclick="calculateTax()">Calculate Tax</button>
+    <input type="text" id="saleRate" placeholder="Your Product Rate" readonly>
+    <input type="text" id="saleTax" placeholder="Your Tax" readonly>
+    <button onclick="generateBill()">Generate Bill</button>
+
+
+    <!-- Table to display final bill -->
+    <h2>Final Bill</h2>
+    <table id="billTable">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Category</th>
+                <th>Rate</th>
+                <th>Tax</th>
+            </tr>
+        </thead>
+        <tbody id="billBody">
+            <!-- Bill details will be populated using JavaScript -->
+        </tbody>
+    </table>
+</body>
+
+</html>
